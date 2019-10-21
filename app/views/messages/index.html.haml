@@ -1,0 +1,45 @@
+.footer
+
+.side 
+  .side__user--name
+    = current_user.name
+  =link_to new_group_path, class: "side__user side__user--edit" do
+    = fa_icon 'edit'
+  =link_to edit_user_path(current_user), class: "side__user side__user--cog" do
+    = fa_icon 'cog'
+  .side__group
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .side__group--name
+          = group.name
+        .side__group--message
+          = group.show_last_message
+
+.right-header
+  .right-header__group
+    .right-header__group--name
+      = @group.name
+    .right-header__group--member
+      Member:
+      - @group.users.each do |user|
+        = user.name
+    .right-header__group--edit
+      = link_to "Edit", edit_group_path(params[:group_id]),method: :get
+
+
+.border
+
+.right-messages
+  .messages      
+    = render @messages
+
+.contents
+  .contents__input
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'contents__input--type', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'contents__input--image' do
+            = fa_icon 'image'
+            = f.file_field :image, class: "contents__input--test"
+        = f.submit 'Send', class: "contents__input--send"
