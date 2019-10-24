@@ -19,3 +19,5 @@
 public/uploads/*
 
 carrierwavw
+
+config/secrets.yml
