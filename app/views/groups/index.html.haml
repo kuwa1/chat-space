@@ -1,11 +1,11 @@
 .wrapper
 
 .side 
-  .side__user--name
+  %p.side__user--name
     = current_user.name
-  =link_to new_group_path, class: "side__user side__user--edit" do
+  =link_to new_group_path, class: "side__user--name side__user--edit" do
     = fa_icon 'edit'
-  =link_to edit_user_path(current_user), class: "side__user side__user--cog" do
+  =link_to edit_user_path(current_user), class: "side__user--name side__user--cog" do
     = fa_icon 'cog'
   .side__group
     - current_user.groups.each do |group|
