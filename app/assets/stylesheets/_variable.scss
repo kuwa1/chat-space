@@ -4,32 +4,34 @@ $main-color: #FFFFFF;
   width: 300px;
   float:left;
   color: $main-color;
+  background-color: #253141;
+  height: 96px;
   &__user{
-    color: $main-color; 
+    color: red; 
     &--name{
     font-size: 16px;
-    background-color: #253141;
-    height: 96px;
-    padding-left: 20px;
+    margin-left: 20px;
     line-height: 96px;
     font-weight: bold;
-    position: relative;
+    color: $main-color;
+    float: left;
     }
     &--edit{
-      position: absolute;
-      left: 245px;
-      top: 38px;
+      color: $main-color;
+      padding-left: 163px;
     }
     &--cog{
-      position: absolute; 
-      left: 270px;
-      top: 37px;
+      color: $main-color;
+      float: right;
+      padding-right: 20px;
     } 
   }
   &__group{
+    width: 300px;
     background-color: #2f3e51;
     height: calc(100vh - 96px);
-    overflow: scroll;   
+    overflow: scroll; 
+    position: relative;  
     &--name{
       color: $main-color;
       font-size: 15px;
