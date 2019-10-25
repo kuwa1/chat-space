@@ -7,7 +7,7 @@ $main-color: #FFFFFF;
   background-color: #253141;
   height: 96px;
   &__user{
-    color: red; 
+    color: $main-color; 
     &--name{
     font-size: 16px;
     margin-left: 20px;
@@ -18,12 +18,14 @@ $main-color: #FFFFFF;
     }
     &--edit{
       color: $main-color;
-      padding-left: 163px;
+      padding-left: 160px;
+      line-height: 96px;
     }
     &--cog{
       color: $main-color;
       float: right;
       padding-right: 20px;
+      line-height: 96px;
     } 
   }
   &__group{
