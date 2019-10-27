@@ -18,7 +18,8 @@ $main-color: #FFFFFF;
     }
     &--edit{
       color: $main-color;
-      padding-left: 160px;
+      float: right;
+      padding-right: 10px;
       line-height: 96px;
     }
     &--cog{
